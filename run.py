@@ -42,12 +42,14 @@ else:
     url=os.getenv("NEO4J_URL")
     username=os.getenv("NEO4J_USERNAME")
     password=os.getenv("NEO4J_PASSWORD")
+    
 
     # Set Neo4j instance
     n4j = Neo4jGraph(
         url=url,
         username=username,             # Default username
-        password=password     # Replace 'yourpassword' with your actual password
+        password=password,     # Replace 'yourpassword' with your actual password
+        database=username
     )
 
     if args.construct_graph: 
